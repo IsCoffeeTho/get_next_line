@@ -6,7 +6,7 @@
 /*   By: amenadue <amenadue@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 09:54:12 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/28 09:54:12 by amenadue         ###   ########.fr       */
+/*   Updated: 2021/09/28 10:12:48 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ char	*get_safe(char *save)
 		free(save);
 		return (0);
 	}
-	if (!(rtn = malloc(sizeof(char) * ((ft_strlen(save) - i) + 1))))
+	rtn = malloc(sizeof(char) * ((ft_strlen(save) - i) + 1));
+	if (!rtn)
 		return (0);
 	i++;
 	while (save[i])
@@ -46,14 +47,13 @@ int	get_next_line(int fd)
 	int				reader;
 
 	reader = 1;
-	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (-1);
-	buff = malloc(sizeof(char) * (BUFFER_SIZE + 1))
-	if (!buff)
+	buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buff || fd < 0 || BUFFER_SIZE <= 0)
 		return (-1);
 	while (!has_return(save) && reader != 0)
 	{
-		if ((reader = read(fd, buff, BUFFER_SIZE)) == -1)
+		reader = read(fd, buff, BUFFER_SIZE);
+		if (reader == -1)
 		{
 			free(buff);
 			return (-1);
