@@ -6,7 +6,7 @@
 /*   By: amenadue <amenadue@student.42adel.o>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 09:54:12 by amenadue          #+#    #+#             */
-/*   Updated: 2021/09/28 09:54:12 by amenadue         ###   ########.fr       */
+/*   Updated: 2021/09/28 10:18:41 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	has_return(char *str)
 
 	i = 0;
 	while (str[i])
-		if (str[i++i] == '\n')
+		if (str[i++] == '\n')
 			return (1);
 	return (0);
 }
