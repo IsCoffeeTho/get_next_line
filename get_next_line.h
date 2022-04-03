@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amenadue <amenadue@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amenadue <amenadue@student.42adel.org.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 09:12:10 by amenadue          #+#    #+#             */
-/*   Updated: 2022/02/24 10:07:44 by amenadue         ###   ########.fr       */
+/*   Created: 2022/03/18 14:33:25 by amenadue          #+#    #+#             */
+/*   Updated: 2022/03/18 14:33:51 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# ifndef BUFFER_SIZE
+# ifndef BUFFER_SIZE 128
 #  define BUFFER_SIZE 128
 # endif
 
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+int		ft_strlen(const char *str);
+char	*ft_strchr(const char *s, int i);
+char	*ft_strdup(const char *s);
+char	*ft_strjoin(char const *s1, char const *s2);
 char	*get_next_line(int fd);
-int		has_return(char *str);
-size_t	ft_strlen(const char *s);
-char	*join_str(const char *s1, const char *s2);
 
 #endif
