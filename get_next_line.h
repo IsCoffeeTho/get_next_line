@@ -6,7 +6,7 @@
 /*   By: amenadue <amenadue@student.42adel.org.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:33:25 by amenadue          #+#    #+#             */
-/*   Updated: 2022/03/18 14:33:51 by amenadue         ###   ########.fr       */
+/*   Updated: 2022/04/04 12:58:34 by amenadue         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# ifndef BUFFER_SIZE 128
+# ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 128
 # endif
 
